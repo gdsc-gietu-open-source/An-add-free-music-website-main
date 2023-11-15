@@ -20,13 +20,21 @@ let songs = [
     {songName: "Tere bina zindagi se koi", filePath: "songs/10.mp3", coverPath: "covers/10.jpg"},
 ]
 
+// handling local files
+document.getElementById("upload-btn").addEventListener('change', function({ srcElement }) {
+    console.log("playing ", srcElement.files[0].name);
+    audioElement.src = URL.createObjectURL(srcElement.files[0]);
+    masterSongName.innerText = srcElement.files[0].name;
+    audioElement.currentTime = 0;
+    audioElement.play();
+    gif.style.opacity = 1;
+});
+
 songItems.forEach((element, i)=>{ 
     element.getElementsByTagName("img")[0].src = songs[i].coverPath; 
     element.getElementsByClassName("songName")[0].innerText = songs[i].songName; 
 })
  
-
-
 masterPlay.addEventListener('click', ()=>{
     if(audioElement.paused || audioElement.currentTime<=0){
         audioElement.play();

@@ -105,7 +105,12 @@ nav ul li{
 }
 
 .songInfo{
-    position: absolute;
+    width: 80vw;
+    display: flex;
+    flex-direction: row;
+    justify-content: left; 
+    column-gap: 20px;
+    align-items: center;
     left: 10vw;
     font-family: 'Varela Round', sans-serif;
 }
