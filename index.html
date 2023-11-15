@@ -11,14 +11,18 @@
     <nav>
         <ul>
             <li class="brand"><img src="logo1.png" alt="project"></li>
-            <li>Home</li>
-            <li>About</li>
+            <li><button onclick="homePage()" style="background: none; color: white; border: none;">Home</button></li>
+            <li><button onclick="aboutPage()" style="background: none; color: white; border: none;">About</button></li>
         </ul>
     </nav>
 
-    <div class="container">
+    <div class="container" id="songContainer">
         <div class="songList">
-            <h1>Best of NCS - No Copyright Sounds</h1>
+            <h1>Best of NCS - No Copyright Sounds</h1><br>
+
+            <label>Play from Local disk</label><br><br>
+            <input type="file" id="audioInput" accept="audio/*" hidden>
+            <label id="Labelinput" for="audioInput">Choose Song</label>
             <div class="songItemContainer">
                 <div class="songItem">
                     <img alt="1">
@@ -75,7 +79,7 @@
         <div class="songBanner"></div>
     </div>
 
-    <div class="bottom">
+    <div class="bottom" id="buttonContainer">
         <input type="range" name="range" id="myProgressBar" min="0" value="0" max="100">
         <div class="icons">
             <!-- fontawesome icons -->
@@ -86,6 +90,18 @@
         <div class="songInfo">
             <img src="playing.gif" width="42px" alt="" id="gif"> <span id="masterSongName">Pal pal dil ke pas-Kishor Kumar</span>
         </div>
+    </div>
+
+    <div id="about" style="display: none;">
+        <center>
+            <h1>About</h1>
+            <p style="font-size: 20px;">
+                You can listen to the preloaded ten songs and You can also choose a song from local storage.<br><br>
+                This music player is a forked version from  <a href="https://github.com/gdsc-gietu-open-source/An-add-free-music-website-main">GDSC GIETU</a><br>
+                Contributed By <a href="https://github.com/srinibash-sai">Srinivas Sai</a>
+            </p>
+        </center>
+
     </div>
     <script src="script.js"></script>
     <script src="https://kit.fontawesome.com/26504e4a1f.js" crossorigin="anonymous"></script>
