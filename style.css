@@ -120,13 +120,6 @@ nav ul li{
     transition: opacity 0.4s ease-in;
 }
 
-@media screen and (max-width: 769px) {
-    /* STYLES HERE */
-  .timestamp {
-    display: none;
-  }
-}
-
 @media only screen and (max-width: 1100px) {
     body {
       background-color: red;
